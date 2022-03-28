@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
-import { CreateComponent } from './admin/create/create.component';
-import { EditComponent } from './admin/edit/edit.component';
-import { TableComponent } from './admin/table/table.component';
+import { CreateCholloComponent } from './admin/table-chollo/create-chollo/create-chollo.component';
+import { EditCholloComponent } from './admin/table-chollo/edit-chollo/edit-chollo.component';
+import { TableCholloComponent } from './admin/table-chollo/table-chollo.component';
+import { CreateHotelComponent } from './admin/table-hotel/create-hotel/create-hotel.component';
+import { EditHotelComponent } from './admin/table-hotel/edit-hotel/edit-hotel.component';
+import { TableHotelComponent } from './admin/table-hotel/table-hotel.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { DestinosComponent } from './destinos/destinos.component';
 import { HomeComponent } from './home/home.component';
@@ -43,17 +46,29 @@ const routes: Routes = [
     component: AdminComponent
   },
   {
-  path: 'admin/table',
-    component: TableComponent
+  path: 'admin/table-hotel',
+    component: TableHotelComponent
   },
   {
-    path: 'admin/table/create',
-      component: CreateComponent
-    },
-    {
-      path: 'admin/table/edit',
-        component: EditComponent
-      },
+  path: 'admin/table-hotel/create-hotel',
+    component: CreateHotelComponent
+  },
+  {
+    path: 'admin/table-hotel/edit-hotel',
+      component: EditHotelComponent
+  },
+  {
+    path: 'admin/table-chollo',
+      component: TableCholloComponent
+  },
+  {
+    path: 'admin/table-chollo/create-chollo',
+      component: CreateCholloComponent
+  },
+  {
+    path: 'admin/table-chollo/edit-chollo',
+      component: EditCholloComponent
+  },
 
 
 ];

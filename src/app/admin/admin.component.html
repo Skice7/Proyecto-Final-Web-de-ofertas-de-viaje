@@ -1,5 +1,23 @@
-<h2 class="text-center">Bienvenido Admin</h2>
+<h2 class="text-center m-3">Bienvenido Admin</h2>
 
-<a class="nav-link active" aria-current="page" routerLink="/admin/table">Ir al CRUD</a>
-<a class="nav-link active" aria-current="page" routerLink="/">Log Out</a>
+<div class="d-flex text-center m-5">
+  <div class="card m-auto w-25">
+    <img src="./assets/hoteles.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">CRUD HOTELES</h5>
+      <a routerLink="/admin/table-hotel" class="btn btn-primary">Ir a hoteles</a>
+    </div>
+  </div>
+  <div class="card m-auto w-25">
+    <img src="./assets/chollos.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title ">CRUD CHOLLOS</h5>
+      <a href="#" class="btn btn-primary" routerLink="/admin/table-chollo">Ir a Chollos</a>
+    </div>
+  </div>
 
+</div>
+<div class="justify-content-center align-items-center">
+
+<button type="button" class="btn btn-primary center-block mx-auto" routerLink="/">CERRAR SESIÓN</button>
+</div>
