@@ -1,52 +1,59 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AdminComponent } from './admin/admin.component';
+import { CreateComponent } from './admin/create/create.component';
+import { EditComponent } from './admin/edit/edit.component';
+import { TableComponent } from './admin/table/table.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
 import { DestinosComponent } from './destinos/destinos.component';
-import { EscapadasComponent } from './escapadas/escapadas.component';
-import { FechasDestacadasComponent } from './fechas-destacadas/fechas-destacadas.component';
 import { HomeComponent } from './home/home.component';
-import { RegimenesComponent } from './regimenes/regimenes.component';
-import { TematicasComponent } from './tematicas/tematicas.component';
+import { LoginComponent } from './login/login.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:'destinos',
-    component:DestinosComponent
+    path: 'destinos',
+    component: DestinosComponent
   },
   {
-  path:'tematicas',
-    component:TematicasComponent
+
+    path: 'usuarios',
+    component: UsuariosComponent
   },
   {
-  path:'fechas-destacadas',
-    component:FechasDestacadasComponent
+    path: 'about',
+    component: AboutComponent
   },
   {
-    path:'regimenes',
-      component:RegimenesComponent
-    },
+    path: 'contactanos',
+    component: ContactanosComponent
+  },
+
   {
-    path:'escapadas',
-      component:EscapadasComponent
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+  path: 'admin',
+    component: AdminComponent
+  },
+  {
+  path: 'admin/table',
+    component: TableComponent
+  },
+  {
+    path: 'admin/table/create',
+      component: CreateComponent
     },
     {
-      path:'usuarios',
-        component:UsuariosComponent
+      path: 'admin/table/edit',
+        component: EditComponent
       },
-    {
-      path:'about',
-        component:AboutComponent
-      },
-      {
-        path:'contactanos',
-          component:ContactanosComponent
-        },
 
 
 ];
