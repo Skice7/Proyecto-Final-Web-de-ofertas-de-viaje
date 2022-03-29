@@ -48,11 +48,11 @@ public class Hoteles {
 		this.hotel_chollo = hotel_chollo;
 	}
 
-	public int getid_hotel() {
+	public int getId_hotel() {
 		return id_hotel;
 	}
 
-	public void setid_hotel(int id_hotel) {
+	public void setId_hotel(int id_hotel) {
 		this.id_hotel = id_hotel;
 	}
 
