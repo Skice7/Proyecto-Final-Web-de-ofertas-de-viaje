@@ -1,187 +1,31 @@
-<h1 class="text-center">CRUD HOTEL</h1>
+<h1 class="text-center" *ngIf="hotel != null;">CRUD HOTEL</h1>
+
 <table id="example" #dTable class="display display w-75 bg-dark border border-dark" >
   <thead class="text-white">
       <tr>
           <th>ID</th>
           <th>Hotel</th>
-          <th>Nombre</th>
           <th>Direccion</th>
           <th>Estrellas</th>
-          <th>Correo</th>
+          <th>Imagen</th>
           <th>Opciones</th>
 
       </tr>
   </thead>
   <tbody>
-      <tr>
-          <td>1</td>
-          <td>Hotel 1</td>
-          <td>Madrid</td>
-          <td>Direccion 1</td>
-          <td>1</td>
-          <td>madridista@gmail.com</td>
+      <tr *ngFor="let data of hotel">
+          <td>{{data.id_hotel}}</td>
+          <td>{{data.nombre}}</td>
+          <td>{{data.direccion}}</td>
+          <td>{{data.estrellas}}</td>
+          <td><a href="" class="stretched-link d-inline-block text-truncate" style="max-width: 200px;">{{data.img}}</a></td>
           <td>
             <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-            <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
+            <button type="submit" class="btn btn-danger" routerLink="*">Eliminar</button>
           </td>
 
       </tr>
-      <tr>
-        <td>1</td>
-        <td>Hotel 1</td>
-        <td>Madrid</td>
-        <td>Direccion 1</td>
-        <td>1</td>
-        <td>madridista@gmail.com</td>
-        <td>
-          <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-          <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-        </td>
 
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Hotel 1</td>
-      <td>Madrid</td>
-      <td>Direccion 1</td>
-      <td>1</td>
-      <td>madridista@gmail.com</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Hotel 1</td>
-    <td>Madrid</td>
-    <td>Direccion 1</td>
-    <td>1</td>
-    <td>madridista@gmail.com</td>
-    <td>
-      <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-      <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-    </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-<tr>
-  <td>1</td>
-  <td>Hotel 1</td>
-  <td>Madrid</td>
-  <td>Direccion 1</td>
-  <td>1</td>
-  <td>madridista@gmail.com</td>
-  <td>
-    <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-    <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-  </td>
-
-</tr>
-
-      <tr>
-        <td>2</td>
-          <td>Hotel 2</td>
-          <td>Nombre 2</td>
-          <td>Direccion 2</td>
-          <td>2</td>
-          <td>alguien@gmail.com</td>
-          <td>
-            <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-            <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-          </td>
-
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Hotel 3</td>
-      <td>Nombre 3</td>
-      <td>Direccion 3</td>
-      <td>3</td>
-      <td>alguien@gmail.com</td>
-      <td>
-        <button type="submit" value="editar" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-  </tr>
 
   </tbody>
 

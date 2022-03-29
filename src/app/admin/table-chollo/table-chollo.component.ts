@@ -1,4 +1,5 @@
 import { Component,AfterViewInit, OnInit, ViewChild } from '@angular/core';
+import { ApiRestService } from 'src/app/Services/api-rest.service';
 
 declare const $: any;
 
@@ -9,6 +10,9 @@ declare const $: any;
 })
 export class TableCholloComponent implements  OnInit, AfterViewInit {
 
+  chollo: any = null;
+  peticionChollo = false;
+
   @ViewChild('dTable',{static : false}) dataTable: any;
 
   ngAfterViewInit(): void {
@@ -17,10 +21,22 @@ export class TableCholloComponent implements  OnInit, AfterViewInit {
     $(this.dataTable.nativeElement).DataTable();
   }
 
+  constructor(private api: ApiRestService) { }
+
   ngOnInit(): void {
-
-
+    this.getChollos();
   }
-}
+
+  getChollos()
+  {
+    this.api.getListaChollos().subscribe(
+      data => {
+        this.peticionChollo = true;
+        this.chollo = data;
+      }
+    )
+    }
+  }
+
 
 

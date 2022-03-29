@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ViajeComponent } from './viaje/viaje.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AboutComponent } from './about/about.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
@@ -18,13 +17,13 @@ import { CreateHotelComponent } from './admin/table-hotel/create-hotel/create-ho
 import { EditHotelComponent } from './admin/table-hotel/edit-hotel/edit-hotel.component';
 import { CreateCholloComponent } from './admin/table-chollo/create-chollo/create-chollo.component';
 import { EditCholloComponent } from './admin/table-chollo/edit-chollo/edit-chollo.component';
+import { ViajeComponent } from './viaje/viaje.component';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ViajeComponent,
     UsuariosComponent,
     AboutComponent,
     ContactanosComponent,
@@ -36,6 +35,9 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     EditHotelComponent,
     CreateCholloComponent,
     EditCholloComponent,
+    ViajeComponent
+
+
   ],
   imports: [
     BrowserModule,

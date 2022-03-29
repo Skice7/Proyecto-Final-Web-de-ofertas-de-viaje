@@ -1,5 +1,6 @@
-<h1 class="text-center">CRUD CHOLLO</h1>
-<table id="example" #dTable class="display w-75 bg-dark border border-dark">
+<h1 class="text-center" *ngIf="chollo != null;">CRUD CHOLLO</h1>
+
+<table id="example" #dTable class="display w-75 bg-dark border border-dark " >
   <thead class="text-white">
     <tr>
       <th>ID</th>
@@ -14,186 +15,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
+    <tr *ngFor="let data of chollo">
+      <td>{{data.id_chollo}}</td>
+      <td>{{data.titulo}}</td>
+      <td>{{data.ubicacion}}</td>
+      <td><a href="*" class="d-inline-block text-truncate" style="max-width: 200px;">{{data.imagen}}</a></td>
+      <td>{{data.precio}}</td>
+      <td class="d-inline-block text-truncate" style="max-width: 200px;">{{data.descripcion}}</td>
+      <td>{{data.fecha_caducidad}}</td>
       <td>
         <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Chollo 1</td>
-      <td>Madrid</td>
-      <td>Imagen 1</td>
-      <td>1</td>
-      <td>Este es el mejor chollo que vas a ver</td>
-      <td>02/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-
-    <tr>
-      <td>2</td>
-      <td>Chollo 2</td>
-      <td>Nombre 2</td>
-      <td>Imagen 2</td>
-      <td>2</td>
-      <td>Este es el mejor chollo que vas a ver jaja</td>
-      <td>03/02/2022</td>
-      <td>
-        <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
-      </td>
-
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Chollo 3</td>
-      <td>Nombre 3</td>
-      <td>Imagen 3</td>
-      <td>3</td>
-      <td>Este es el mejor chollo que vas a ver jeje</td>
-      <td>04/02/2022</td>
-      <td>
-        <button type="submit" value="editar" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo">Editar</button>
-        <button type="submit" class="btn btn-danger mx-2" routerLink="*">Eliminar</button>
+        <button type="submit" class="btn btn-danger" routerLink="*">Eliminar</button>
       </td>
     </tr>
 
