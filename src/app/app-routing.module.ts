@@ -9,7 +9,7 @@ import { CreateHotelComponent } from './admin/table-hotel/create-hotel/create-ho
 import { EditHotelComponent } from './admin/table-hotel/edit-hotel/edit-hotel.component';
 import { TableHotelComponent } from './admin/table-hotel/table-hotel.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-import { DestinosComponent } from './destinos/destinos.component';
+import { ViajeComponent } from './viaje/viaje.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
@@ -20,8 +20,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'destinos',
-    component: DestinosComponent
+    path: 'viaje',
+    component: ViajeComponent
   },
   {
 

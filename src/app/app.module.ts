@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DestinosComponent } from './destinos/destinos.component';
+import { ViajeComponent } from './viaje/viaje.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { AboutComponent } from './about/about.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
@@ -18,12 +18,13 @@ import { CreateHotelComponent } from './admin/table-hotel/create-hotel/create-ho
 import { EditHotelComponent } from './admin/table-hotel/edit-hotel/edit-hotel.component';
 import { CreateCholloComponent } from './admin/table-chollo/create-chollo/create-chollo.component';
 import { EditCholloComponent } from './admin/table-chollo/edit-chollo/edit-chollo.component';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DestinosComponent,
+    ViajeComponent,
     UsuariosComponent,
     AboutComponent,
     ContactanosComponent,
@@ -35,8 +36,6 @@ import { EditCholloComponent } from './admin/table-chollo/edit-chollo/edit-choll
     EditHotelComponent,
     CreateCholloComponent,
     EditCholloComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -45,7 +44,7 @@ import { EditCholloComponent } from './admin/table-chollo/edit-chollo/edit-choll
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
