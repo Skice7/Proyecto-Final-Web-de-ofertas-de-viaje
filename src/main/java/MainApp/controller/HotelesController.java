@@ -56,6 +56,7 @@ public class HotelesController {
 		Hoteles_seleccionado.setNombre(Hoteles.getNombre());
 		Hoteles_seleccionado.setDireccion(Hoteles.getDireccion());
 		Hoteles_seleccionado.setEstrellas(Hoteles.getEstrellas());
+		Hoteles_seleccionado.setImg(Hoteles.getImg());
 		
 		Hoteles_actualizado = HotelesServiceImpl.actualizarHoteles(Hoteles_seleccionado);
 

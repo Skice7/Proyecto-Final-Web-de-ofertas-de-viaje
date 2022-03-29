@@ -30,6 +30,7 @@ public class Hoteles {
 	private String nombre;
 	private String direccion;
 	private int estrellas;
+	private String img;
 	
 	@OneToMany
     @JoinColumn(name="id")
@@ -39,13 +40,25 @@ public class Hoteles {
 		super();
 	}
 
-	public Hoteles(int id_hotel, String nombre, String direccion, int estrellas, List<Hotel_chollo> hotel_chollo) {
+	public Hoteles(int id_hotel, String nombre, String direccion, int estrellas, String img,
+			List<Hotel_chollo> hotel_chollo) {
 		super();
 		this.id_hotel = id_hotel;
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.estrellas = estrellas;
+		this.img = img;
 		this.hotel_chollo = hotel_chollo;
+	}
+
+
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 	public int getid_hotel() {
@@ -83,8 +96,9 @@ public class Hoteles {
 	@Override
 	public String toString() {
 		return "Hoteles [id_hotel=" + id_hotel + ", nombre=" + nombre + ", direccion=" + direccion + ", estrellas="
-				+ estrellas + ", id_chollo=" + hotel_chollo + "]";
+				+ estrellas + ", img=" + img + ", hotel_chollo=" + hotel_chollo + "]";
 	}
+
 
 	
 	
