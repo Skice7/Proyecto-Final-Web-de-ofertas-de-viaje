@@ -1,7 +1,7 @@
-<div class="masthead w-100 m-auto"
-  style="background-image: url('https://www.losviajesdegrimes.com/wp-content/uploads/2020/06/viajar-por-Espa%C3%B1a.jpg');">
+<div class="masthead w-100 m-auto" *ngIf="chollo != null;"
+  style="background-image: url('{{chollo.imagen}}'); background-position: 15% 50%;">
   <div class="color-overlay d-flex justify-content-center align-items-center">
-    <h1>titulo viaje</h1>
+    <h1>{{chollo.titulo}}</h1>
   </div>
 </div>
 
@@ -102,6 +102,6 @@
 <div class="w-75 m-auto mt-4 d-flex">
   <div class="text-wrap justify-content-center align-items-center">
     <h3>descripcion</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores cupiditate illo minima quae perferendis nemo, neque voluptate asperiores debitis blanditiis. Ullam obcaecati voluptate sit delectus explicabo aperiam unde quam.</p>
+    <p>{{chollo.descripcion}}</p>
   </div>
 </div>

@@ -1,23 +1,21 @@
-<div class="container bg-dark border border-dark text-center text-white w-25 h-50 mt-5">
+<div class="container bg-dark border border-dark text-center text-white w-25 mt-5">
   <h1>Login</h1>
-  <form>
+  <form *ngIf="!submitted" name="form">
     <div class="form-group">
 
-      <label class="col-lg-4 control-label m-2">Usuario</label>
+      <label class="col-lg-4 control-label m-2" >Usuario</label>
 
-      <input type="text" class="form-control w-50 m-auto" id="usuario" placeholder="Introduce el usuario" />
+      <input type="text" class="form-control w-50 m-auto" id="usuario" placeholder="Introduce el usuario" required [(ngModel)]="login.username"
+      name="username"/>
     </div>
     <div class="form-group ">
       <label class="m-2">Contraseña</label>
-      <input type="password" class="form-control w-50 m-auto" id="password" placeholder="Password" />
+      <input type="password" class="form-control w-50 m-auto" id="password" placeholder="Password"  required
+      [(ngModel)]="login.password" name="password" />
     </div>
-    <div class="form-check m-3">
-      <div class="form-check m-3  d-flex align-items-center">
-        <label class="form-check-label m-auto"><input type="checkbox" class="form-check-input" id="recuerdame" />Recuerdame</label>
-      </div>
+    <div class="">
+      <button type="submit" (click)="logUser()" class="btn btn-primary m-3">Enviar</button>
     </div>
-    <button type="submit" class="btn btn-primary m-3" routerLink="/admin">Enviar</button>
-
   </form>
 </div>
 

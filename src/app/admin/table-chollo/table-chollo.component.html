@@ -1,4 +1,3 @@
-<h1 class="text-center" *ngIf="chollo != null;">CRUD CHOLLO</h1>
 
 <table id="example" #dTable class="display w-75 bg-dark border border-dark " >
   <thead class="text-white">
@@ -19,7 +18,7 @@
       <td>{{data.id_chollo}}</td>
       <td>{{data.titulo}}</td>
       <td>{{data.ubicacion}}</td>
-      <td><a href="*" class="d-inline-block text-truncate" style="max-width: 200px;">{{data.imagen}}</a></td>
+      <td><a href="{{data.imagen}}" class="d-inline-block text-truncate" style="max-width: 200px;">{{data.imagen}}</a></td>
       <td>{{data.precio}}</td>
       <td class="d-inline-block text-truncate" style="max-width: 200px;">{{data.descripcion}}</td>
       <td>{{data.fecha_caducidad}}</td>
@@ -28,7 +27,6 @@
         <button type="submit" class="btn btn-danger" routerLink="*">Eliminar</button>
       </td>
     </tr>
-
   </tbody>
 
 
@@ -38,3 +36,12 @@
   <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-chollo/create-chollo">Crear</button>
   <button type="submit" class="btn btn-primary m-3" routerLink="/admin">Volver al menú</button>
 </div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+        var height = $(window).height();
+
+        $('.flex-shrink-0').height(height);
+  });
+</script>

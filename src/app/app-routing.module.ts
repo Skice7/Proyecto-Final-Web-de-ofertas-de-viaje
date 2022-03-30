@@ -9,10 +9,10 @@ import { CreateHotelComponent } from './admin/table-hotel/create-hotel/create-ho
 import { EditHotelComponent } from './admin/table-hotel/edit-hotel/edit-hotel.component';
 import { TableHotelComponent } from './admin/table-hotel/table-hotel.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
+import { ViajeComponent } from './viaje/viaje.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { ViajeComponent } from './viaje/viaje.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'viaje',
+    path: 'viaje/:id',
     component: ViajeComponent
   },
   {
