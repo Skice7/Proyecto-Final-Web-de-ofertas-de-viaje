@@ -3,6 +3,7 @@ package MainApp.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import MainApp.dto.Chollos;
 import MainApp.service.ChollosServiceImpl;
 
+@CrossOrigin(origins="https://v2-0.d3imvis1r8wksy.amplifyapp.com/")
 @RestController
 @RequestMapping("/api")
 public class ChollosController {
