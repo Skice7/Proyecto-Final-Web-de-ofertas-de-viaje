@@ -21,7 +21,7 @@
           <td>{{data.estrellas}}</td>
           <td class="text-truncate" style="max-width: 500px;"><a href="{{data.img}}">{{data.img}}</a></td>
           <td>
-            <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo/{{data.id_hotel}}">Editar</button>
+            <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel/{{data.id_hotel}}">Editar</button>
           </td>
           <td>
             <button type="submit" class="btn btn-danger" role="button" (click)="eliminar(data.id_hotel)">Eliminar</button>
@@ -30,7 +30,7 @@
 
   </tbody>
   <div class="position-absolute ">
-    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-chollo/create-chollo">Crear</button>
+    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel/create-hotel">Crear</button>
 
     <button type="submit" class="btn btn-primary m-3" routerLink="/admin">Volver al menú</button>
   </div>

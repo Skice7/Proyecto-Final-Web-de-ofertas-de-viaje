@@ -1,4 +1,4 @@
-<div class="container border border-dark text-center text-dark w-50 h-50 mt-5">
+<div class="container text-center text-dark w-50 h-50 mt-5">
   <h1>Editar Hotel</h1>
   <form class=>
     <div class="form-group">
@@ -20,7 +20,7 @@
       <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="Madrid" name="img" [(ngModel)]="hotel.img"/>
     </div>
 
-    <button type="submit" class="btn btn-primary m-3" role="button" (click)="update(chollo.id_chollo)">Editar</button>
+    <button type="submit" class="btn btn-primary m-3" role="button" (click)="update(chollo.id_hotel)">Editar</button>
     <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel">Cancelar</button>
 
   </form>
