@@ -1,30 +1,29 @@
-<div class="container border border-dark text-center text-dark w-50 h-50 mt-5">
+<div class="container   text-center text-dark w-50 h-50 mt-5">
   <h1>Crear Hotel</h1>
-  <form class=>
+  <form>
     <div class="form-group">
 
-      <label class="col-lg-4 control-label m-2">Hotel</label>
+      <label class="col-lg-4 control-label m-2"><strong>Hotel</strong></label>
 
-      <input type="text" class="form-control w-50 m-auto" id="hotel" placeholder="Introduce nombre del hotel"/>
+      <input type="text" class="form-control w-50 m-auto border border-dark" id="hotel" name="nombre" placeholder="Introduce nombre del hotel"[(ngModel)]="hotel.nombre"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Ubicación</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"/>
+      <label class="m-2"><strong>Dirección</strong></label>
+      <input type="text" class="form-control w-50 m-auto border border-dark" id="ubicacion border border-dark"  name="direccion" placeholder="Escribe la ubicación" [(ngModel)]="hotel.direccion" />
     </div>
     <div class="form-group ">
-      <label class="m-2">Valoración</label>
-      <select class="form-select  w-50 m-auto ">
-        <option selected>Elige una valoración</option>
-        <option value="5">⭐⭐⭐⭐⭐</option>
-        <option value="4">⭐⭐⭐⭐</option>
-        <option value="3">⭐⭐⭐</option>
-        <option value="2">⭐⭐</option>
-        <option value="1">⭐</option>
-      </select>
+      <label class="m-2"><strong>Estrellas</strong></label>
+      <input type="number" min="1" max="5" class="form-control w-50 m-auto border border-dark" id="estrellas" name="estrellas" placeholder="Escribe del 1 al 5 la valoración de estrellas" [(ngModel)]="hotel.estrellas"/>
+    </div>
+    <div class="form-group ">
+      <label class="m-2"><strong>Imagen</strong></label>
+      <input type="text" class="form-control w-50 m-auto border border-dark" id="imagen" name="img" placeholder="Escribe la url" [(ngModel)]="hotel.img"/>
     </div>
 
-    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel">Crear</button>
+
+    <button type="submit" class="btn btn-primary m-3" role="button" (click)='create()'>Crear</button>
     <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel">Cancelar</button>
+
 
   </form>
 </div>

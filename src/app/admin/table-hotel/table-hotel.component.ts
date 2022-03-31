@@ -1,6 +1,8 @@
 
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiRestService } from 'src/app/Services/api-rest.service';
+import { Hotel } from 'src/app/Services/models/hotel.model';
 
 declare const $: any;
 
@@ -9,35 +11,38 @@ declare const $: any;
   templateUrl: './table-hotel.component.html',
   styleUrls: ['./table-hotel.component.css']
 })
-export class TableHotelComponent implements OnInit, AfterViewInit {
+export class TableHotelComponent implements OnInit {
 
-  hotel: any = null;
+  id: any;
+  hotel:Hotel = new Hotel();
+  chollo: any = null;
   peticionHotel = false;
 
-@ViewChild('dTable',{static : false}) dataTable: any;
-
-  ngAfterViewInit(): void {
-
-
-    $(this.dataTable.nativeElement).DataTable();
-  }
-
-  constructor(private api: ApiRestService) { }
+  constructor(private api:ApiRestService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getHotel();
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.getHoteles();
   }
-  getHotel()
+
+  getHoteles()
   {
     this.api.getListaHoteles().subscribe(
       data => {
-        this.peticionHotel = true;
-        this.hotel = data;
+        this.peticionHotel= true;
+        this.chollo = data;
       }
     )
     }
 
-
+    eliminar(id: string):void{
+      console.log(id);
+      this.api.deleteHotel(id).subscribe(
+        res=> this.api.getListaHoteles().subscribe(
+          Response=>this.chollo=Response
+          )
+      );
+    }
   }
 
 

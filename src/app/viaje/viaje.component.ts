@@ -30,4 +30,9 @@ export class ViajeComponent implements OnInit {
 
   }
 
+  mensaje(): void{
+    window.alert("El hotel seleccionado realizara su reserva en unos instantes, le llegara un correo de confirmacion poco despues");
+  }
+
+
 }

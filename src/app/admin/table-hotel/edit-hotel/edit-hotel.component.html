@@ -5,25 +5,22 @@
 
       <label class="col-lg-4 control-label m-2">Hotel</label>
 
-      <input type="text" class="form-control w-50 m-auto" id="hotel" placeholder="Introduce nombre del hotel" value="Hotel 3"/>
+      <input type="text" class="form-control w-50 m-auto" id="hotel" placeholder="Introduce nombre del hotel" value="Hotel 3" name="nombre" [(ngModel)]="hotel.nombre"/>
     </div>
     <div class="form-group ">
       <label class="m-2">Ubicación</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="Madrid"/>
+      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="Madrid" name="direccion" [(ngModel)]="hotel.direccion"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Valoración</label>
-      <select class="form-select  w-50 m-auto ">
-        <option selected >Elige una valoración</option>
-        <option value="5">⭐⭐⭐⭐⭐</option>
-        <option value="4">⭐⭐⭐⭐</option>
-        <option value="3">⭐⭐⭐</option>
-        <option value="2">⭐⭐</option>
-        <option value="1">⭐</option>
-      </select>
+      <label class="m-2"><strong>Estrellas</strong></label>
+      <input type="number" min="1" max="5" class="form-control w-50 m-auto border border-dark" id="estrellas" name="estrellas" placeholder="Escribe del 1 al 5 la valoración de estrellas" [(ngModel)]="hotel.estrellas"/>
+    </div>
+    <div class="form-group ">
+      <label class="m-2">imagen</label>
+      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="Madrid" name="img" [(ngModel)]="hotel.img"/>
     </div>
 
-    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel">Editar</button>
+    <button type="submit" class="btn btn-primary m-3" role="button" (click)="update(chollo.id_chollo)">Editar</button>
     <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel">Cancelar</button>
 
   </form>

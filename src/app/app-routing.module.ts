@@ -54,7 +54,7 @@ const routes: Routes = [
     component: CreateHotelComponent
   },
   {
-    path: 'admin/table-hotel/edit-hotel',
+    path: 'admin/table-hotel/edit-hotel/:id',
       component: EditHotelComponent
   },
   {
@@ -66,7 +66,7 @@ const routes: Routes = [
       component: CreateCholloComponent
   },
   {
-    path: 'admin/table-chollo/edit-chollo',
+    path: 'admin/table-chollo/edit-chollo/:id',
       component: EditCholloComponent
   },
 

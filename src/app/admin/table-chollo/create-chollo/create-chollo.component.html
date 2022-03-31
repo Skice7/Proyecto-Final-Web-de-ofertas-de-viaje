@@ -1,35 +1,35 @@
-<div class="container border border-dark text-center text-dark w-50 h-50 mt-5">
-  <h1>Crear Chollo</h1>
-  <form class=>
+<div class="container text-center text-dark w-50 h-50 mt-5">
+  <h1>Crear Viaje</h1>
+  <form>
     <div class="form-group">
 
-      <label class="col-lg-4 control-label m-2">Título</label>
+      <label class="col-lg-4 control-label m-2"><strong>Título</strong></label>
 
-      <input type="text" class="form-control w-50 m-auto" id="hotel" placeholder="Introduce nombre del hotel" value="Chollo 1"/>
+      <input type="text" class="form-control w-50 m-auto" id="titulo" name="titulo" placeholder="Introduce nombre del hotel" [(ngModel)]="viaje.titulo"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Ubicación</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="Madrid"/>
+      <label class="m-2"><strong>Ubicación</strong></label>
+      <input type="text" class="form-control w-50 m-auto" id="ubicacion" name="ubicacion" placeholder="Escribe la ubicación" [(ngModel)]="viaje.ubicacion"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Imagen</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value=""/>
+      <label class="m-2"><strong>Imagen</strong></label>
+      <input type="text" class="form-control w-50 m-auto" id="imagen" name="imagen" placeholder="Inserta url de la imagen" [(ngModel)]="viaje.imagen"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Precio</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="1"/>
+      <label class="m-2"><strong>Precio</strong></label>
+      <input type="number" class="form-control w-50 m-auto" id="precio" name="precio" placeholder="Escribe un precio" [(ngModel)]="viaje.precio"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Descripción</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value=""/>
+      <label class="m-2"><strong>Descripción</strong></label>
+      <input type="text" class="form-control w-50 m-auto" id="descripcion" name="descripcion" placeholder="Escribe una breve descripción del chollo" [(ngModel)]="viaje.descripcion"/>
     </div>
     <div class="form-group ">
-      <label class="m-2">Fecha Caducidad</label>
-      <input type="text" class="form-control w-50 m-auto" id="ubicacion" placeholder="Escribe la ubicación"  value="02/02/2022"/>
+      <label class="m-2"><strong>Fecha Caducidad</strong></label>
+      <input type="date" class="form-control w-50 m-auto " id="fecha_caducidad" name="fecha_caducidad" placeholder="Escribe la fecha de caducidad" [(ngModel)]="viaje.fecha_caducidad"/>
     </div>
 
 
-    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-chollo">Crear</button>
+    <button type="submit" class="btn btn-primary m-3" role="button" (click)='create()'>Crear</button>
     <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-chollo">Cancelar</button>
 
   </form>

@@ -1,6 +1,6 @@
 <h1 class="text-center" *ngIf="hotel != null;">CRUD HOTEL</h1>
 
-<table id="example" #dTable class="display display w-75 bg-dark border border-dark" >
+<table class="table table-dark table-striped mt-3 w-75 m-auto text-center" >
   <thead class="text-white">
       <tr>
           <th>ID</th>
@@ -8,30 +8,30 @@
           <th>Direccion</th>
           <th>Estrellas</th>
           <th>Imagen</th>
-          <th>Opciones</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
 
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let data of hotel">
+      <tr *ngFor="let data of chollo">
           <td>{{data.id_hotel}}</td>
           <td>{{data.nombre}}</td>
           <td>{{data.direccion}}</td>
           <td>{{data.estrellas}}</td>
-          <td><a href="{{data.img}}" class="d-inline-block text-truncate" style="max-width: 200px;">{{data.img}}</a></td>
+          <td class="text-truncate" style="max-width: 500px;"><a href="{{data.img}}">{{data.img}}</a></td>
           <td>
-            <button type="submit" class="btn btn-warning" routerLink="/admin/table-hotel/edit-hotel">Editar</button>
-            <button type="submit" class="btn btn-danger" routerLink="*">Eliminar</button>
+            <button type="submit" class="btn btn-warning" routerLink="/admin/table-chollo/edit-chollo/{{data.id_hotel}}">Editar</button>
+          </td>
+          <td>
+            <button type="submit" class="btn btn-danger" role="button" (click)="eliminar(data.id_hotel)">Eliminar</button>
           </td>
       </tr>
 
-
   </tbody>
+  <div class="position-absolute ">
+    <button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-chollo/create-chollo">Crear</button>
 
-
-
+    <button type="submit" class="btn btn-primary m-3" routerLink="/admin">Volver al menú</button>
+  </div>
 </table>
-<div class="w-100 justify-content-center align-items-center">
-<button type="submit" class="btn btn-primary m-3" routerLink="/admin/table-hotel/create-hotel">Crear</button>
-<button type="submit" class="btn btn-primary m-3" routerLink="/admin">Volver al menú</button>
-</div>
